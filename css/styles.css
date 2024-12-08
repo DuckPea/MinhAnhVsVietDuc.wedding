@@ -1792,3 +1792,15 @@ body {
 	text-align: center;
 	margin-bottom: 20px;
 }
+.mea-culpa-regular {
+	font-family: "Mea Culpa", cursive !important;
+	font-weight: 500;
+	font-style: normal;
+  }
+  
+.genos-date-timeline {
+  font-family: "Genos", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
