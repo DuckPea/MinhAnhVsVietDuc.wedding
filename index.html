@@ -15,7 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Mea+Culpa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style id="wp-emoji-styles-inline-css" type="text/css">
 
         img.wp-smiley, img.emoji {
@@ -162,6 +164,7 @@
     <script type="text/javascript" src="js/hooks.min.js"></script>
     <script type="text/javascript" src="js/i18n.min.js"></script>
     <script type="text/javascript" src="js/index_1.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body class="page-template page-template-page-blank-landingpage page-template-page-blank-landingpage-php page page-id-3309 header-shadow lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border elementor-default elementor-kit-2280">
 <div class="snowflakes" aria-hidden="true">
@@ -412,8 +415,16 @@
 
 
     <div id="wrapper">
-
         <div id="main" class="">
+            <button
+                    type="button"
+                    id="tombol-musik"
+                    class="btn btn-light btn-sm rounded-circle btn-music"
+                    onclick="togglePlay(this)"
+                    data-status="false"
+                    data-url="music/Just-Say-Hello.mp3">
+                <i class="fa-solid fa-circle-pause"></i>
+            </button>
             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_268718347">
                 <a class="image-lightbox lightbox-gallery" title="" href="images/anhCuoi103.jpg">
                     <div data-animate="fadeInLeft">

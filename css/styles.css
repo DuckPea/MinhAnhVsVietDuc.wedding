@@ -1185,7 +1185,7 @@ body {
 }
 
 .story-date {
-	font-size: 32px;
+	font-size: 24px;
 	font-family: var(--title-font);
 }
 
@@ -1803,4 +1803,48 @@ body {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+}
+
+
+.btn-music {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 50%; /* Circle button */
+	background-color: #f8f9fa; /* Light background */
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.3s;
+}
+
+.btn-music:hover {
+	background-color: #e2e6ea; /* Slightly darker on hover */
+}
+
+.btn-music i {
+	font-size: 1.5rem; /* Icon size */
+	color: #343a40; /* Icon color */
+}
+
+#tombol-musik {
+	position: fixed; /* or absolute */
+	bottom: 10px; /* Adjust as needed */
+	right: 10px; /* Adjust as needed */
+	z-index: 9999; /* High value to ensure it is on top */
+}
+
+#scrollTopBtn, #scrollBottomBtn {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	border: none;
+	padding: 10px 15px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+	z-index: 9999;
 }
