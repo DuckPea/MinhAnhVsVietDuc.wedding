@@ -45,3 +45,12 @@ let audioPlayed = false; // Biến để kiểm tra xem âm thanh đã được 
                document.getElementById('toggle-music').innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
            }
        });
+function handleInteraction() {
+           if (!audioPlayed) { // Chỉ phát nhạc lần đầu tiên khi có tương tác 
+               const audioUrl = 'music/Just-Say-Hello.mp3';
+               audioPlayer.play(audioUrl);
+               audioPlayed = true; // Đánh dấu rằng âm thanh đã được phát 
+               window.removeEventListener('touchstart', handleInteraction);
+           }
+       }
+       window.addEventListener('touchstart', handleInteraction);
