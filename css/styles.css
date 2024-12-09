@@ -1832,19 +1832,58 @@ body {
 #tombol-musik {
 	position: fixed; /* or absolute */
 	bottom: 10px; /* Adjust as needed */
-	right: 10px; /* Adjust as needed */
+	right: 25px; /* Adjust as needed */
 	z-index: 9999; /* High value to ensure it is on top */
 }
 
-#scrollTopBtn, #scrollBottomBtn {
-	position: fixed;
-	bottom: 50px;
-	right: 20px;
-	border: none;
-	padding: 10px 15px;
+.music-container {
+	position: relative;
+	display: inline-block;
+}
+
+.tooltip {
+	visibility: visible; /* Hiển thị ngay lập tức */
 	background-color: #333;
 	color: #fff;
-	cursor: pointer;
+	text-align: center;
 	border-radius: 5px;
-	z-index: 9999;
+	padding: 5px;
+	font-size: 12px;
+	position: fixed;
+	bottom: 85px;
+	right: 8px;
+	white-space: nowrap;
+	z-index: 1000;
+	opacity: 1;
+	transition: opacity 0.3s;
+	animation: blink 2s infinite;
+}
+
+.tooltip::after {
+	content: "";
+	position: absolute;
+	top: 100%; /* Mũi tên chỉ xuống nút */
+	left: 50%;
+	transform: translateX(-50%);
+	border-width: 5px;
+	border-style: solid;
+	border-color: #333 transparent transparent transparent;
+}
+
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

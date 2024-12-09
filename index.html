@@ -416,15 +416,20 @@
 
     <div id="wrapper">
         <div id="main" class="">
-            <button
-                    type="button"
-                    id="tombol-musik"
-                    class="btn btn-light btn-sm rounded-circle btn-music"
-                    onclick="togglePlay(this)"
-                    data-status="false"
-                    data-url="music/Just-Say-Hello.mp3">
-                <i class="fa-solid fa-circle-play"></i>
-            </button>
+            <div class="music-container">
+                <button
+                        type="button"
+                        id="tombol-musik"
+                        class="btn btn-light btn-sm rounded-circle btn-music"
+                        onclick="togglePlay(this)"
+                        data-status="false"
+                        data-url="music/Just-Say-Hello.mp3">
+                    <i class="fa-solid fa-circle-play"></i>
+                </button>
+                <span class="tooltip" id="music-tooltip">Nhấn để bật nhạc 🎵</span>
+            </div>
+
+
             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_268718347">
                 <a class="image-lightbox" href="images/anhCuoi103.jpg" title="Ảnh cưới đẹp">
                     <div data-animate="fadeInLeft">
