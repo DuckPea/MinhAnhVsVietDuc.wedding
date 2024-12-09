@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Mea+Culpa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
     <style id="wp-emoji-styles-inline-css" type="text/css">
 
         img.wp-smiley, img.emoji {
@@ -107,9 +111,6 @@
             margin: 0 0 1em
         }
 
-        html :where(.is-position-sticky) {
-            --wp-admin--admin-bar--position-offset: var(--wp-admin--admin-bar--height, 0px)
-        }
 
         @media screen and (max-width: 600px) {
             html :where(.is-position-sticky) {
@@ -163,7 +164,6 @@
     <script src="js/wp-emoji-release.min.js" defer=""></script>
     <script type="text/javascript" src="js/hooks.min.js"></script>
     <script type="text/javascript" src="js/i18n.min.js"></script>
-    <script type="text/javascript" src="js/index_1.js"></script>
     <script src="js/app.js"></script>
 </head>
 <body class="page-template page-template-page-blank-landingpage page-template-page-blank-landingpage-php page page-id-3309 header-shadow lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border elementor-default elementor-kit-2280">
@@ -426,12 +426,12 @@
                 <i class="fa-solid fa-circle-play"></i>
             </button>
             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_268718347">
-                <a class="image-lightbox lightbox-gallery" title="" href="images/anhCuoi103.jpg">
+                <a class="image-lightbox" href="images/anhCuoi103.jpg" title="Ảnh cưới đẹp">
                     <div data-animate="fadeInLeft">
                         <div class="img-inner dark">
                             <img loading="lazy" fetchpriority="high" decoding="async" width="1020" height="712"
                                  src="images/anhCuoi103.jpg"
-                                 class="attachment-large size-large" alt=""
+                                 class="attachment-large size-large" alt="Ảnh cưới"
                                  srcset="images/anhCuoi103.jpg 1024w, images/anhCuoi103.jpg 300w, images/anhCuoi103.jpg 768w, images/anhCuoi103.jpg 1500w"
                                  sizes="(max-width: 1020px) 100vw, 1020px">
                         </div>
@@ -610,6 +610,11 @@
                                     <style>
                                         #image_1732090853 {
                                             width: 55%;
+                                        }
+                                        @media (max-width: 500px) {
+                                            #image_1732090853 {
+                                                width: 100%;
+                                            }
                                         }
                                     </style>
                                 </div>
@@ -1421,75 +1426,38 @@
 </script>
 <script type="text/javascript" src="js/hooks.min.js" id="wp-hooks-js"></script>
 <script type="text/javascript" src="js/i18n.min.js" id="wp-i18n-js"></script>
-<script type="text/javascript" id="wp-i18n-js-after">
-    /* <![CDATA[ */
-    wp.i18n.setLocaleData({'text direction\u0004ltr': ['ltr']});
-    /* ]]> */
-</script>
-<script type="text/javascript" src="js/index.js" id="swv-js"></script>
-<script type="text/javascript" id="contact-form-7-js-translations">
-    /* <![CDATA[ */
-    (function (domain, translations) {
-        var localeData = translations.locale_data[domain] || translations.locale_data.messages;
-        localeData[""].domain = domain;
-        wp.i18n.setLocaleData(localeData, domain);
-    })("contact-form-7", {
-        "translation-revision-date": "2024-08-11 13:44:17+0000",
-        "generator": "GlotPress\/4.0.1",
-        "domain": "messages",
-        "locale_data": {
-            "messages": {
-                "": {
-                    "domain": "messages",
-                    "plural-forms": "nplurals=1; plural=0;",
-                    "lang": "vi_VN"
-                },
-                "This contact form is placed in the wrong place.": ["Bi\u1ec3u m\u1eabu li\u00ean h\u1ec7 n\u00e0y \u0111\u01b0\u1ee3c \u0111\u1eb7t sai v\u1ecb tr\u00ed."],
-                "Error:": ["L\u1ed7i:"]
-            }
-        },
-        "comment": {"reference": "includes\/js\/index.js"}
-    });
-    /* ]]> */
-</script>
-<script type="text/javascript" src="js/index_1.js" id="contact-form-7-js"></script>
 <script type="text/javascript" src="js/flatsome-live-search.js" id="flatsome-live-search-js"></script>
-<script type="text/javascript" src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
 <script type="text/javascript" src="js/hoverIntent.min.js" id="hoverIntent-js"></script>
 <script type="text/javascript" id="flatsome-js-js-extra">
     /* <![CDATA[ */
     var flatsomeVars = {
-        "theme": {"version": "3.16.0"},
-        "ajaxurl": "https:\/\/thiepcuoi360.vn\/wp-admin\/admin-ajax.php",
-        "rtl": "",
-        "sticky_height": "70",
-        "assets_url": "https:\/\/thiepcuoi360.vn\/wp-content\/themes\/flatsome\/assets\/js\/",
-        "lightbox": {
-            "close_markup": "<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>",
-            "close_btn_inside": false
+        theme: { version: "3.16.0" },
+        ajaxurl: "/wp-admin/admin-ajax.php", // Thay URL gốc nếu cần
+        rtl: "",
+        sticky_height: "70",
+        assets_url: "/js/", // Đường dẫn tới thư mục assets mới
+        lightbox: {
+            close_markup: '<button title="%title%" type="button" class="mfp-close"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>',
+            close_btn_inside: false
         },
-        "user": {"can_edit_pages": false},
-        "i18n": {"mainMenu": "Main Menu", "toggleButton": "Toggle"},
-        "options": {
-            "cookie_notice_version": "1",
-            "swatches_layout": false,
-            "swatches_box_select_event": false,
-            "swatches_box_behavior_selected": false,
-            "swatches_box_update_urls": "1",
-            "swatches_box_reset": false,
-            "swatches_box_reset_extent": false,
-            "swatches_box_reset_time": 300,
-            "search_result_latency": "0"
+        user: { can_edit_pages: false },
+        i18n: { mainMenu: "Main Menu", toggleButton: "Toggle" },
+        options: {
+            cookie_notice_version: "1",
+            swatches_layout: false,
+            swatches_box_select_event: false,
+            swatches_box_behavior_selected: false,
+            swatches_box_update_urls: "1",
+            swatches_box_reset: false,
+            swatches_box_reset_extent: false,
+            swatches_box_reset_time: 300,
+            search_result_latency: "0"
         }
     };
     /* ]]> */
 </script>
 <script type="text/javascript" src="js/flatsome.js" id="flatsome-js-js"></script>
-<!--[if IE]>
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/intersection-observer-polyfill@0.1.0/dist/IntersectionObserver.js?ver=0.1.0"
-        id="intersection-observer-polyfill-js"></script>
-<![endif]-->
+
 
 <script>
     document.getElementById('submit-button').addEventListener('click', function (event) {
