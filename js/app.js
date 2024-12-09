@@ -51,6 +51,8 @@ function handleInteraction() {
                audioPlayer.play(audioUrl);
                audioPlayed = true; // Đánh dấu rằng âm thanh đã được phát 
                window.removeEventListener('touchstart', handleInteraction);
+             document.getElementById('toggle-music').setAttribute('data-status', 'true');
+               document.getElementById('toggle-music').innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
            }
        }
        window.addEventListener('touchstart', handleInteraction);
