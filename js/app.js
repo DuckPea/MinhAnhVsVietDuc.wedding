@@ -46,13 +46,18 @@ let audioPlayed = false; // Biến để kiểm tra xem âm thanh đã được 
            }
        });
 function handleInteraction() {
-           if (!audioPlayed) { // Chỉ phát nhạc lần đầu tiên khi có tương tác 
+           const button = document.getElementById('toggle-music');
+           const isPlaying = button.getAttribute('data-status') === 'true';
+           if (!audioPlayed || !isPlaying) { // Chỉ phát nhạc lần đầu tiên hoặc nếu đang tạm dừng 
                const audioUrl = 'music/Just-Say-Hello.mp3';
                audioPlayer.play(audioUrl);
+               button.setAttribute('data-status', 'true');
+               button.innerHTML = '<i class="fa-solid fa-circle-pause"></i>'; // Update icon to "pause" 
                audioPlayed = true; // Đánh dấu rằng âm thanh đã được phát 
-               window.removeEventListener('touchstart', handleInteraction);
-             document.getElementById('toggle-music').setAttribute('data-status', 'true');
-               document.getElementById('toggle-music').innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
+           } else {
+               audioPlayer.pause();
+               button.setAttribute('data-status', 'false');
+               button.innerHTML = '<i class="fa-solid fa-circle-play"></i>'; // Update icon to "play" 
            }
        }
        window.addEventListener('touchstart', handleInteraction);
