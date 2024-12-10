@@ -1219,7 +1219,7 @@
                                                     <input size="40" maxlength="400"
                                                            class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
                                                            aria-required="true" aria-invalid="false"
-                                                           placeholder="Tên của bạn" value=""
+                                                           placeholder="Tên của bạn..." value=""
                                                            type="text" name="text-7">
                                                 </span>
                                             </label>
@@ -1229,7 +1229,7 @@
                                                     <input
                                                         size="40" maxlength="400"
                                                         class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                        aria-required="true" aria-invalid="false" value="" type="email"
+                                                        aria-required="true" aria-invalid="false" value="" type="email" placeholder="Email của bạn..."
                                                         name="your-email">
                                                 </span>
                                             </label>
@@ -1245,7 +1245,7 @@
                                                     </select>
                                                 </span>
                                             </label>
-                                            <label> Bạn sẽ đi cùng ai?<br>
+                                            <label>Số lượng người tham dự?<br>
                                                 <span class="wpcf7-form-control-wrap"
                                                       data-name="menu-411">
                                                     <select class="wpcf7-form-control wpcf7-select" aria-invalid="false"
@@ -1267,9 +1267,13 @@
                                                     </textarea>
                                                 </span>
                                             </label>
-                                            <input id="submit-button" type="submit"
-                                                   value="XÁC NHẬN THAM DỰ">
+                                            <div style="text-align: center;">
+                                                <div id="form-loader" class="loader"></div>
+                                                <input id="submit-button" type="submit" value="XÁC NHẬN THAM DỰ">
+                                            </div>
+
                                         </div>
+
                                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                                     </form>
                                 </div>
@@ -1477,6 +1481,14 @@
 <script>
     document.getElementById('submit-button').addEventListener('click', function (event) {
         event.preventDefault();
+
+        // Hiển thị loader và ẩn nút submit
+        const loader = document.getElementById('form-loader');
+        const submitButton = document.getElementById('submit-button');
+        loader.style.display = 'inline-block';
+        submitButton.classList.add('hidden'); // Ẩn nút submit
+
+        // Thu thập dữ liệu từ form
         var formData = {
             name: document.querySelector('input[name="text-7"]').value,
             email: document.querySelector('input[name="your-email"]').value,
@@ -1484,6 +1496,8 @@
             guests: document.querySelector('select[name="menu-411"]').value,
             message: document.querySelector('textarea[name="textarea-230"]').value
         };
+
+        // Gửi dữ liệu qua fetch
         fetch('https://script.google.com/macros/s/AKfycbwJzZgS0HJCZlznRkBR0wV_Or_mxZmHqEHc5x7Ro_Apu6-cVgKT3iljtXQfXV08wNsd/exec', {
             method: 'POST',
             body: JSON.stringify(formData),
@@ -1491,12 +1505,18 @@
                 'Content-Type': 'application/json'
             },
             mode: 'no-cors'
-        }).then(response => {
-            alert('Bạn đã xác nhận thành công,cảm ơn bạn rất nhiều!');
-        }).catch(error => {
-            alert('There was an error submitting the data.');
+        }).then(() => {
+            alert('Cảm ơn bạn đã xác nhận tham dự!');
+        }).catch(() => {
+            alert('Có lỗi xảy ra khi gửi dữ liệu.');
+        }).finally(() => {
+            // Ẩn loader và hiển thị lại nút submit
+            loader.style.display = 'none';
+            submitButton.classList.remove('hidden'); // Hiện nút submit lại
         });
     });
+
+
 </script>
 
 </body>
