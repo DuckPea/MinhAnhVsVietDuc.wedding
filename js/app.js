@@ -42,3 +42,41 @@ function togglePlay(button) {
     }
 }
 
+// Hàm cuộn lên đầu trang
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Hàm cuộn xuống cuối trang
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+
+// Hàm kiểm tra trạng thái nút
+function checkScrollButtons() {
+    const startButton = document.getElementById("start-page");
+    const endButton = document.getElementById("end-page");
+
+    // Kiểm tra nếu đang ở đầu trang
+    if (window.scrollY === 0) {
+        startButton.disabled = true; // Vô hiệu hóa nút Start Page
+    } else {
+        startButton.disabled = false; // Kích hoạt nút Start Page
+    }
+
+    // Kiểm tra nếu đang ở cuối trang
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        endButton.disabled = true; // Vô hiệu hóa nút End Page
+    } else {
+        endButton.disabled = false; // Kích hoạt nút End Page
+    }
+}
+
+// Gọi hàm kiểm tra trạng thái nút khi cuộn
+window.addEventListener("scroll", checkScrollButtons);
