@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" href="images/anhTen.png" sizes="32x32">
-    <title>Viết Đức - Minh Anh</title>
+    <title>Minh Anh - Viết Đức</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
@@ -1499,13 +1499,15 @@
             },
             mode: 'no-cors'
         }).then(() => {
-            alert('Cảm ơn bạn đã xác nhận tham dự!');
+            alert('Cảm ơn bạn đã xác nhận');
+            const submitText = document.createElement('span');
+            submitText.textContent = 'Cảm ơn bạn đã xác nhận';
+            submitButton.replaceWith(submitText);
         }).catch(() => {
             alert('Có lỗi xảy ra khi gửi dữ liệu.');
         }).finally(() => {
             // Ẩn loader và hiển thị lại nút submit
             loader.style.display = 'none';
-            submitButton.classList.remove('hidden'); // Hiện nút submit lại
         });
     });
 
